@@ -1,21 +1,41 @@
 let result = document.getElementById("result");
 let btn = document.querySelectorAll(".button");
+let inp=document.getElementById("input");
+let input=[];
+let i=0;
+
+// inp.addEventListener("click",()=>{
+//     console.log("clicked input");
+// })
 
 btn.forEach(btn => {
     btn.addEventListener("click", () => {
-        //let clickBtn=document.querySelectorAll()  
-        console.log("clickeddd");
         //selects current clicked 
-        let current=event.currentTarget;
+        let current = event.currentTarget;
         let num = event.currentTarget.querySelector("p");
         let a = num.innerText;
-        // result.innerText=out;
-        console.log(a, "is clicked");
-                if(a=="C"){
-                    result.innerText="";
-                }else{
-                    result.innerText=a;
-                }
+        //click action
+        console.log(a);
+        
+        if(a=="C"){
+            result.innerHTML="";
+            inp.innerText="";
+            input="";
+        }else if(a!="="){
+            input+=a;
+            inp.innerText=input;
+            i++;
+        }else{   // = is clicked 
+            let parts = input.split(/(\+|\-|\*|\/)/);
+            let num1=parts[0];
+            let opn=parts[1];
+            let num2=parts[2];
+            console.log(num1+" " +num2+" "+opn);
+        }
+
+
+
+
 
 
     });
