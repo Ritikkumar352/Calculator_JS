@@ -27,27 +27,13 @@ btn.forEach(btn => {
             i++;
         }else{   // = is clicked 
             let parts = input.split(/(\+|\-|\*|\/)/);
-            let num1=parts[0];
-            let opn=parts[1];
-            let num2=parts[2];
+            let num1=parseInt(parts[0]);
+            let opn=(parts[1]);
+            let num2=parseInt(parts[2]);
             console.log(num1+" " +num2+" "+opn);
         }
-
-
-
-
-
 
     });
 });
 
 
-
-
-
-
-
-
-// let x=5;
-// let b=3;
-// let out=x + b;
