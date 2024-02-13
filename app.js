@@ -28,11 +28,41 @@ btn.forEach(btn => {
         }else{   // = is clicked 
             let parts = input.split(/(\+|\-|\*|\/)/);
             let num1=parseInt(parts[0]);
-            let opn=(parts[1]);
+            let opn=parts[1];
             let num2=parseInt(parts[2]);
-            console.log(num1+" " +num2+" "+opn);
-        }
 
+            //calculation of output result 
+            switch(opn){
+                case '+':
+                    answer=num1 + num2;
+                    result.innerText=answer;
+                    break;
+                case '-':
+                    answer=num1 -num2;
+                    result.innerText=answer;
+                    break;
+                case '*':
+                    answer=num1 *num2;
+                    result.innerText=answer;
+                    break;
+                case '/':
+                    if(num2!==0){
+                        answer=num1/num2;
+                        result.innerText=answer;
+                    }else{
+                        answer="Cann't divide by '0'";
+                        result.innerText=answer;
+                    }
+                    break;
+                default:
+                    answer="Error!!";
+                    result.innerText=answer;
+            }
+            console.log("answer  is ", answer);
+            // console.log(num1+" " +num2+" "+opn);
+            // let sol=num1+num2;
+            // console.log(sol);
+        }
     });
 });
 
