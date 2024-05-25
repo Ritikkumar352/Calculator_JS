@@ -1,6 +1,9 @@
 # Calculator_JS
 A simple calculator.
 
+# live at 
+[Calculator](https://ritikkumar352.github.io/Calculator_JS/)
+
 Making a simple calculator all by my self for JS Practice
 
 
